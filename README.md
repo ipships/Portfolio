@@ -1,6 +1,6 @@
 # Ipshu Portfolio
 
-A futuristic, recruiter-friendly portfolio built with `Next.js`, `TypeScript`, and `Tailwind CSS`, designed for static deployment on GitHub Pages.
+Personal portfolio built with `Next.js`, `TypeScript`, and `Tailwind CSS`, designed for static deployment on GitHub Pages.
 
 ## Stack
 
