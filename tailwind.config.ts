@@ -12,24 +12,30 @@ const config: Config = {
         bg: "rgb(var(--bg) / <alpha-value>)",
         panel: "rgb(var(--panel) / <alpha-value>)",
         "panel-strong": "rgb(var(--panel-strong) / <alpha-value>)",
+        surface: "rgb(var(--surface) / <alpha-value>)",
+        "surface-strong": "rgb(var(--surface-strong) / <alpha-value>)",
+        "surface-soft": "rgb(var(--surface-soft) / <alpha-value>)",
         line: "rgb(var(--line) / <alpha-value>)",
         text: "rgb(var(--text) / <alpha-value>)",
+        "text-soft": "rgb(var(--text-soft) / <alpha-value>)",
+        "text-muted": "rgb(var(--text-muted) / <alpha-value>)",
         muted: "rgb(var(--muted) / <alpha-value>)",
         accent: "rgb(var(--accent) / <alpha-value>)",
         secondary: "rgb(var(--secondary) / <alpha-value>)",
-        tertiary: "rgb(var(--tertiary) / <alpha-value>)"
+        tertiary: "rgb(var(--tertiary) / <alpha-value>)",
+        "grid-line": "rgb(var(--grid-line) / <alpha-value>)"
       },
       fontFamily: {
         sans: ["var(--font-body)", "sans-serif"],
         display: ["var(--font-display)", "sans-serif"]
       },
       boxShadow: {
-        glow: "0 0 0 1px rgba(255,255,255,0.06), 0 24px 80px rgba(66, 240, 210, 0.18)",
-        soft: "0 24px 60px rgba(6, 8, 20, 0.45)"
+        glow: "0 0 0 1px rgb(var(--line) / 0.08), 0 24px 80px rgb(var(--accent) / 0.18)",
+        soft: "0 24px 60px rgb(var(--shadow) / 0.24)"
       },
       backgroundImage: {
         grid:
-          "linear-gradient(to right, rgba(255,255,255,0.08) 1px, transparent 1px), linear-gradient(to bottom, rgba(255,255,255,0.08) 1px, transparent 1px)"
+          "linear-gradient(to right, rgb(var(--grid-line) / 0.08) 1px, transparent 1px), linear-gradient(to bottom, rgb(var(--grid-line) / 0.08) 1px, transparent 1px)"
       },
       animation: {
         float: "float 7s ease-in-out infinite",

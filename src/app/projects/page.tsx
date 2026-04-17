@@ -6,7 +6,7 @@ import { projects } from "@/data/projects";
 
 export default function ProjectsPage() {
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(66,240,210,0.12),_transparent_20%),linear-gradient(180deg,#050816_0%,#090d18_100%)]">
+    <main className="min-h-screen bg-projects-gradient">
       <section className="mx-auto max-w-7xl px-4 pb-20 pt-24 sm:px-6 lg:px-8">
         <Reveal>
           <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">

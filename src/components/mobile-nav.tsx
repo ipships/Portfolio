@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 
+import { ThemeSwitcher } from "@/components/theme-switcher";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
 
@@ -18,14 +19,14 @@ export function MobileNav({ links }: MobileNavProps) {
       <button
         aria-expanded={open}
         aria-label="Toggle navigation"
-        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/10 bg-white/5 text-white transition hover:bg-white/10"
+        className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-line/10 bg-surface text-text transition hover:bg-surface-strong"
         onClick={() => setOpen((current) => !current)}
         type="button"
       >
         <span
           className={cn(
             "relative block h-3.5 w-4",
-            "[&_span]:absolute [&_span]:left-0 [&_span]:block [&_span]:h-0.5 [&_span]:w-4 [&_span]:rounded-full [&_span]:bg-white [&_span]:transition"
+            "[&_span]:absolute [&_span]:left-0 [&_span]:block [&_span]:h-0.5 [&_span]:w-4 [&_span]:rounded-full [&_span]:bg-text [&_span]:transition"
           )}
         >
           <span className={cn(open ? "top-1.5 rotate-45" : "top-0")} />
@@ -36,7 +37,7 @@ export function MobileNav({ links }: MobileNavProps) {
 
       <div
         className={cn(
-          "absolute inset-x-4 top-[72px] rounded-[28px] border border-white/10 bg-panel-strong/95 p-5 shadow-soft backdrop-blur transition duration-300",
+          "absolute inset-x-4 top-[78px] rounded-[28px] border border-line/10 bg-panel-strong/95 p-5 shadow-soft backdrop-blur transition duration-300",
           open
             ? "pointer-events-auto translate-y-0 opacity-100"
             : "pointer-events-none -translate-y-4 opacity-0"
@@ -45,7 +46,7 @@ export function MobileNav({ links }: MobileNavProps) {
         <nav className="flex flex-col gap-2">
           {links.map((link) => (
             <Link
-              className="rounded-2xl px-4 py-3 text-sm text-white/80 transition hover:bg-white/[0.06] hover:text-white"
+              className="rounded-2xl px-4 py-3 text-sm text-text-soft transition hover:bg-surface hover:text-text"
               href={link.href}
               key={link.href}
               onClick={() => setOpen(false)}
@@ -54,6 +55,9 @@ export function MobileNav({ links }: MobileNavProps) {
             </Link>
           ))}
         </nav>
+        <div className="mt-4">
+          <ThemeSwitcher mobile />
+        </div>
         <Button
           className="mt-4 w-full"
           href="#contact"

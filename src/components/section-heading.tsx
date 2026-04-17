@@ -14,10 +14,10 @@ export function SectionHeading({
       <p className="text-xs font-semibold uppercase tracking-[0.34em] text-accent/80">
         {eyebrow}
       </p>
-      <h2 className="font-display text-3xl font-semibold tracking-tight text-white sm:text-4xl">
+      <h2 className="font-display text-3xl font-semibold tracking-tight text-text sm:text-4xl">
         {title}
       </h2>
-      <p className="text-base leading-7 text-white/70 sm:text-lg">{description}</p>
+      <p className="text-base leading-7 text-text-soft sm:text-lg">{description}</p>
     </div>
   );
 }

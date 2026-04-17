@@ -48,11 +48,11 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
   }
 
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(123,148,255,0.16),_transparent_22%),linear-gradient(180deg,#050816_0%,#090d18_100%)]">
+    <main className="min-h-screen bg-project-detail-gradient">
       <section className="mx-auto max-w-6xl px-4 pb-20 pt-20 sm:px-6 lg:px-8">
         <div className="flex flex-wrap items-center justify-between gap-4">
           <Link
-            className="rounded-full border border-white/10 px-4 py-2 text-sm text-white/[0.74] transition hover:bg-white/[0.06] hover:text-white"
+            className="rounded-full border border-line/10 px-4 py-2 text-sm text-text-soft transition hover:bg-surface hover:text-text"
             href="/projects"
           >
             Back to Projects
@@ -73,10 +73,10 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
               <p className="text-xs uppercase tracking-[0.32em] text-accent/80">
                 {project.badge}
               </p>
-              <h1 className="font-display text-4xl font-semibold tracking-tight text-white sm:text-5xl">
+              <h1 className="font-display text-4xl font-semibold tracking-tight text-text sm:text-5xl">
                 {project.title}
               </h1>
-              <p className="max-w-3xl text-lg leading-8 text-white/[0.72]">
+              <p className="max-w-3xl text-lg leading-8 text-text-soft">
                 {project.summary}
               </p>
             </div>
@@ -84,7 +84,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             <div className="flex flex-wrap gap-3">
               {project.stack.map((item) => (
                 <span
-                  className="rounded-full border border-white/10 bg-white/5 px-4 py-2 text-sm text-white/[0.74]"
+                  className="rounded-full border border-line/10 bg-surface px-4 py-2 text-sm text-text-soft"
                   key={item}
                 >
                   {item}
@@ -101,17 +101,17 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
           <div className="grid gap-6">
             <Card>
-              <p className="text-xs uppercase tracking-[0.28em] text-white/50">Role</p>
-              <p className="mt-3 text-xl text-white">{project.role}</p>
-              <p className="mt-1 text-white/[0.58]">{project.timeline}</p>
+              <p className="text-xs uppercase tracking-[0.28em] text-text-muted">Role</p>
+              <p className="mt-3 text-xl text-text">{project.role}</p>
+              <p className="mt-1 text-text-muted">{project.timeline}</p>
             </Card>
             <Card>
-              <p className="text-xs uppercase tracking-[0.28em] text-white/50">Problem</p>
-              <p className="mt-3 leading-7 text-white/[0.74]">{project.problem}</p>
+              <p className="text-xs uppercase tracking-[0.28em] text-text-muted">Problem</p>
+              <p className="mt-3 leading-7 text-text-soft">{project.problem}</p>
             </Card>
             <Card>
-              <p className="text-xs uppercase tracking-[0.28em] text-white/50">Approach</p>
-              <p className="mt-3 leading-7 text-white/[0.74]">{project.approach}</p>
+              <p className="text-xs uppercase tracking-[0.28em] text-text-muted">Approach</p>
+              <p className="mt-3 leading-7 text-text-soft">{project.approach}</p>
             </Card>
           </div>
         </div>
@@ -124,7 +124,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             <div className="mt-5 space-y-3">
               {project.highlights.map((item) => (
                 <div
-                  className="rounded-[20px] border border-white/[0.08] bg-white/[0.03] px-4 py-4 text-white/[0.72]"
+                  className="rounded-[20px] border border-line/8 bg-surface-soft px-4 py-4 text-text-soft"
                   key={item}
                 >
                   {item}
@@ -138,7 +138,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
             <div className="mt-5 space-y-3">
               {project.outcomes.map((item) => (
                 <div
-                  className="rounded-[20px] border border-white/[0.08] bg-white/[0.03] px-4 py-4 text-white/[0.72]"
+                  className="rounded-[20px] border border-line/8 bg-surface-soft px-4 py-4 text-text-soft"
                   key={item}
                 >
                   {item}
@@ -150,7 +150,7 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
 
         <Card className="mt-6">
           <p className="text-xs uppercase tracking-[0.28em] text-tertiary/80">Tiny charm</p>
-          <p className="mt-3 leading-7 text-white/[0.74]">{project.cuteMoment}</p>
+          <p className="mt-3 leading-7 text-text-soft">{project.cuteMoment}</p>
         </Card>
 
         {!project.links.length ? null : (

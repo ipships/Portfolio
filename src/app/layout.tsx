@@ -3,6 +3,7 @@ import { Manrope, Space_Grotesk } from "next/font/google";
 import type { ReactNode } from "react";
 
 import { siteConfig } from "@/data/site";
+import { themeInitScript } from "@/lib/theme";
 import "./globals.css";
 
 const display = Space_Grotesk({
@@ -38,6 +39,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body
         className={`${display.variable} ${body.variable} min-h-screen bg-bg font-sans text-text antialiased`}
       >
+        <script dangerouslySetInnerHTML={{ __html: themeInitScript }} />
         {children}
       </body>
     </html>

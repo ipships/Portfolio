@@ -21,11 +21,11 @@ type Props = ButtonProps | LinkButtonProps;
 
 const variants = {
   primary:
-    "border-accent/60 bg-accent/[0.15] text-white shadow-glow hover:-translate-y-0.5 hover:bg-accent/20",
+    "border-accent/60 bg-accent/[0.15] text-text shadow-glow hover:-translate-y-0.5 hover:bg-accent/20 hover:text-text",
   secondary:
-    "border-white/10 bg-white/5 text-white hover:-translate-y-0.5 hover:border-white/20 hover:bg-white/[0.08]",
+    "border-line/10 bg-surface text-text hover:-translate-y-0.5 hover:border-line/20 hover:bg-surface-strong",
   ghost:
-    "border-transparent bg-transparent text-white/[0.82] hover:bg-white/[0.06] hover:text-white"
+    "border-transparent bg-transparent text-text-soft hover:bg-surface-soft hover:text-text"
 };
 
 const sharedClassName =

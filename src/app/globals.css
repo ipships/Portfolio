@@ -2,16 +2,137 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+:root,
+html[data-mode="dark"][data-accent="ocean"] {
+  color-scheme: dark;
   --bg: 9 13 24;
   --panel: 13 18 33;
   --panel-strong: 11 15 28;
-  --line: 255 255 255;
+  --surface: 18 25 43;
+  --surface-strong: 26 34 56;
+  --surface-soft: 15 21 37;
+  --line: 228 240 255;
   --text: 236 247 255;
-  --muted: 236 247 255;
+  --text-soft: 193 210 228;
+  --text-muted: 139 159 183;
+  --muted: 193 210 228;
   --accent: 66 240 210;
   --secondary: 123 148 255;
   --tertiary: 255 150 224;
+  --grid-line: 180 203 232;
+  --shadow: 6 8 20;
+  --home-gradient: radial-gradient(circle at top, rgb(var(--accent) / 0.18), transparent 30%),
+    radial-gradient(circle at 85% 10%, rgb(var(--secondary) / 0.14), transparent 22%),
+    linear-gradient(180deg, rgb(5 8 22) 0%, rgb(var(--bg)) 45%, rgb(7 10 18) 100%);
+  --projects-gradient: radial-gradient(circle at top, rgb(var(--accent) / 0.12), transparent 20%),
+    linear-gradient(180deg, rgb(5 8 22) 0%, rgb(var(--bg)) 100%);
+  --project-detail-gradient: radial-gradient(circle at top, rgb(var(--secondary) / 0.16), transparent 22%),
+    linear-gradient(180deg, rgb(5 8 22) 0%, rgb(var(--bg)) 100%);
+  --contact-gradient:
+    radial-gradient(circle at top left, rgb(var(--accent) / 0.12), transparent 30%),
+    radial-gradient(circle at bottom right, rgb(var(--tertiary) / 0.12), transparent 26%);
+  --cover-overlay:
+    radial-gradient(circle at top, rgb(255 255 255 / 0.24), transparent 35%),
+    linear-gradient(180deg, rgb(9 13 24 / 0.08), rgb(9 13 24 / 0.86));
+}
+
+html[data-mode="dark"][data-accent="purple"] {
+  color-scheme: dark;
+  --bg: 18 10 31;
+  --panel: 25 16 43;
+  --panel-strong: 18 11 34;
+  --surface: 32 21 52;
+  --surface-strong: 42 29 67;
+  --surface-soft: 23 15 41;
+  --line: 236 224 255;
+  --text: 246 239 255;
+  --text-soft: 212 195 236;
+  --text-muted: 164 145 195;
+  --muted: 212 195 236;
+  --accent: 196 136 255;
+  --secondary: 122 105 255;
+  --tertiary: 255 134 209;
+  --grid-line: 203 184 237;
+  --shadow: 11 7 24;
+  --home-gradient: radial-gradient(circle at top, rgb(var(--accent) / 0.22), transparent 30%),
+    radial-gradient(circle at 88% 12%, rgb(var(--secondary) / 0.18), transparent 24%),
+    linear-gradient(180deg, rgb(13 8 27) 0%, rgb(var(--bg)) 48%, rgb(9 6 19) 100%);
+  --projects-gradient: radial-gradient(circle at top, rgb(var(--accent) / 0.15), transparent 20%),
+    linear-gradient(180deg, rgb(13 8 27) 0%, rgb(var(--bg)) 100%);
+  --project-detail-gradient: radial-gradient(circle at top, rgb(var(--secondary) / 0.2), transparent 22%),
+    linear-gradient(180deg, rgb(13 8 27) 0%, rgb(var(--bg)) 100%);
+  --contact-gradient:
+    radial-gradient(circle at top left, rgb(var(--accent) / 0.14), transparent 30%),
+    radial-gradient(circle at bottom right, rgb(var(--tertiary) / 0.14), transparent 26%);
+  --cover-overlay:
+    radial-gradient(circle at top, rgb(255 255 255 / 0.18), transparent 35%),
+    linear-gradient(180deg, rgb(18 10 31 / 0.05), rgb(18 10 31 / 0.88));
+}
+
+html[data-mode="dark"][data-accent="red"] {
+  color-scheme: dark;
+  --bg: 24 10 13;
+  --panel: 33 14 17;
+  --panel-strong: 25 10 12;
+  --surface: 43 18 23;
+  --surface-strong: 57 24 31;
+  --surface-soft: 31 13 16;
+  --line: 255 232 222;
+  --text: 255 243 238;
+  --text-soft: 234 201 191;
+  --text-muted: 190 150 142;
+  --muted: 234 201 191;
+  --accent: 255 102 126;
+  --secondary: 255 151 92;
+  --tertiary: 255 214 120;
+  --grid-line: 232 190 168;
+  --shadow: 20 7 8;
+  --home-gradient: radial-gradient(circle at top, rgb(var(--accent) / 0.2), transparent 30%),
+    radial-gradient(circle at 86% 12%, rgb(var(--secondary) / 0.16), transparent 22%),
+    linear-gradient(180deg, rgb(18 7 8) 0%, rgb(var(--bg)) 46%, rgb(11 5 6) 100%);
+  --projects-gradient: radial-gradient(circle at top, rgb(var(--accent) / 0.14), transparent 20%),
+    linear-gradient(180deg, rgb(18 7 8) 0%, rgb(var(--bg)) 100%);
+  --project-detail-gradient: radial-gradient(circle at top, rgb(var(--secondary) / 0.2), transparent 22%),
+    linear-gradient(180deg, rgb(18 7 8) 0%, rgb(var(--bg)) 100%);
+  --contact-gradient:
+    radial-gradient(circle at top left, rgb(var(--accent) / 0.16), transparent 30%),
+    radial-gradient(circle at bottom right, rgb(var(--tertiary) / 0.14), transparent 26%);
+  --cover-overlay:
+    radial-gradient(circle at top, rgb(255 255 255 / 0.16), transparent 35%),
+    linear-gradient(180deg, rgb(24 10 13 / 0.05), rgb(24 10 13 / 0.88));
+}
+
+html[data-mode="light"] {
+  color-scheme: light;
+  --bg: 244 246 250;
+  --panel: 255 255 255;
+  --panel-strong: 236 240 247;
+  --surface: 248 250 253;
+  --surface-strong: 239 243 248;
+  --surface-soft: 245 247 251;
+  --line: 39 58 83;
+  --text: 24 33 48;
+  --text-soft: 77 92 112;
+  --text-muted: 110 124 145;
+  --muted: 77 92 112;
+  --accent: 61 111 245;
+  --secondary: 117 88 255;
+  --tertiary: 255 128 166;
+  --grid-line: 95 111 135;
+  --shadow: 113 131 158;
+  --home-gradient: radial-gradient(circle at top, rgb(var(--accent) / 0.12), transparent 28%),
+    radial-gradient(circle at 85% 10%, rgb(var(--secondary) / 0.08), transparent 22%),
+    linear-gradient(180deg, rgb(255 255 255) 0%, rgb(248 250 253) 46%, rgb(var(--bg)) 100%);
+  --projects-gradient: radial-gradient(circle at top, rgb(var(--accent) / 0.1), transparent 20%),
+    linear-gradient(180deg, rgb(255 255 255) 0%, rgb(var(--bg)) 100%);
+  --project-detail-gradient: radial-gradient(circle at top, rgb(var(--secondary) / 0.11), transparent 24%),
+    linear-gradient(180deg, rgb(255 255 255) 0%, rgb(var(--bg)) 100%);
+  --contact-gradient:
+    radial-gradient(circle at top left, rgb(var(--accent) / 0.1), transparent 30%),
+    radial-gradient(circle at bottom right, rgb(var(--tertiary) / 0.08), transparent 26%);
+  --cover-overlay:
+    radial-gradient(circle at top, rgb(255 255 255 / 0.72), transparent 34%),
+    linear-gradient(180deg, rgb(255 255 255 / 0.02), rgb(244 246 250 / 0.82));
 }
 
 * {
@@ -20,6 +141,7 @@
 
 html {
   scroll-behavior: smooth;
+  background: rgb(var(--bg));
 }
 
 body {
@@ -27,6 +149,9 @@ body {
   min-width: 320px;
   background: rgb(var(--bg));
   color: rgb(var(--text));
+  transition:
+    background-color 240ms ease,
+    color 240ms ease;
 }
 
 a {
@@ -36,7 +161,7 @@ a {
 
 ::selection {
   background: rgb(var(--accent) / 0.28);
-  color: #fff;
+  color: rgb(var(--bg));
 }
 
 @layer base {
@@ -62,5 +187,27 @@ a {
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+}
+
+@layer utilities {
+  .bg-home-gradient {
+    background-image: var(--home-gradient);
+  }
+
+  .bg-projects-gradient {
+    background-image: var(--projects-gradient);
+  }
+
+  .bg-project-detail-gradient {
+    background-image: var(--project-detail-gradient);
+  }
+
+  .bg-contact-gradient {
+    background-image: var(--contact-gradient);
+  }
+
+  .bg-cover-overlay {
+    background-image: var(--cover-overlay);
   }
 }
